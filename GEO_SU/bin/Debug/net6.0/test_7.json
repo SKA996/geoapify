@@ -1,0 +1,213 @@
+{
+    "results": [{
+            "datasource": {
+                "sourcename": "openstreetmap",
+                "attribution": "© OpenStreetMap contributors",
+                "license": "Open Database License",
+                "url": "https://www.openstreetmap.org/copyright"
+            },
+            "name": "Детская библиотека №7 \"Славянка\"",
+            "country": "Russia",
+            "country_code": "ru",
+            "region": "Northwestern Federal District",
+            "state": "Saint Petersburg",
+            "city": "Saint Petersburg",
+            "postcode": "192288",
+            "district": "Александровский округ",
+            "suburb": "Obukhovo",
+            "street": "улица Ярослава Гашека",
+            "housenumber": "26",
+            "lon": 30.4177181,
+            "lat": 59.8399825,
+            "formatted": "Детская библиотека №7 \"Славянка\", улица Ярослава Гашека 26, Obukhovo, Saint Petersburg, Russia, 192288",
+            "address_line1": "Детская библиотека №7 \"Славянка\"",
+            "address_line2": "улица Ярослава Гашека 26, Obukhovo, Saint Petersburg, Russia, 192288",
+            "category": "education.library",
+            "timezone": {
+                "name": "Europe/Moscow",
+                "offset_STD": "+03:00",
+                "offset_STD_seconds": 10800,
+                "offset_DST": "+03:00",
+                "offset_DST_seconds": 10800,
+                "abbreviation_STD": "MSK",
+                "abbreviation_DST": "MSK"
+            },
+            "result_type": "amenity",
+            "rank": {
+                "importance": 0.30001,
+                "popularity": 6.806871345638893,
+                "confidence": 0.406125,
+                "confidence_city_level": 0.9025,
+                "confidence_street_level": 0.81225,
+                "match_type": "inner_part"
+            },
+            "place_id": "517f72ca92ef6a3e40592d5beb8b84eb4d40f00103f901b1e5d5f500000000c0020192033bd094d0b5d182d181d0bad0b0d18f20d0b1d0b8d0b1d0bbd0b8d0bed182d0b5d0bad0b020e28496372022d0a1d0bbd0b0d0b2d18fd0bdd0bad0b022",
+            "bbox": {
+                "lon1": 30.4176681,
+                "lat1": 59.8399325,
+                "lon2": 30.4177681,
+                "lat2": 59.8400325
+            }
+        },
+		{
+            "country_code": "ru",
+            "housenumber": "7 к1",
+            "street": "улица Ярослава Гашека",
+            "country": "Russia",
+            "datasource": {
+                "sourcename": "openstreetmap",
+                "attribution": "© OpenStreetMap contributors",
+                "license": "Open Database License",
+                "url": "https://www.openstreetmap.org/copyright"
+            },
+            "state": "Saint Petersburg",
+            "city": "Saint Petersburg City",
+            "suburb": "Myasokombinat",
+            "lon": 30.386651,
+            "lat": 59.830589,
+            "formatted": "улица Ярослава Гашека 7 к1, Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "address_line1": "улица Ярослава Гашека 7 к1",
+            "address_line2": "Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "timezone": {
+                "name": "Europe/Moscow",
+                "offset_STD": "+03:00",
+                "offset_STD_seconds": 10800,
+                "offset_DST": "+03:00",
+                "offset_DST_seconds": 10800,
+                "abbreviation_STD": "MSK",
+                "abbreviation_DST": "MSK"
+            },
+            "result_type": "building",
+            "rank": {
+                "popularity": 7.283777255335219,
+                "confidence": 0,
+                "confidence_city_level": 0,
+                "confidence_street_level": 0,
+                "match_type": "full_match"
+            },
+			
+            "place_id": "5138f7578ffb623e40596cb587bd50ea4d40f00101f90108f8600000000000c00203e203266f70656e7374726565746d61703a616464726573733a72656c6174696f6e2f36333534393532"
+        }, 
+		{
+            "country_code": "ru",
+            "housenumber": "7 к3",
+            "street": "улица Ярослава Гашека",
+            "country": "Russia",
+            "datasource": {
+                "sourcename": "openstreetmap",
+                "attribution": "© OpenStreetMap contributors",
+                "license": "Open Database License",
+                "url": "https://www.openstreetmap.org/copyright"
+            },
+            "state": "Saint Petersburg",
+            "city": "Saint Petersburg City",
+            "suburb": "Myasokombinat",
+            "lon": 30.387472,
+            "lat": 59.830205,
+            "formatted": "улица Ярослава Гашека 7 к3, Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "address_line1": "улица Ярослава Гашека 7 к3",
+            "address_line2": "Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "timezone": {
+                "name": "Europe/Moscow",
+                "offset_STD": "+03:00",
+                "offset_STD_seconds": 10800,
+                "offset_DST": "+03:00",
+                "offset_DST_seconds": 10800,
+                "abbreviation_STD": "MSK",
+                "abbreviation_DST": "MSK"
+            },
+            "result_type": "building",
+            "rank": {
+                "popularity": 7.238570055670087,
+                "confidence": 0,
+                "confidence_city_level": 0,
+                "confidence_street_level": 0,
+                "match_type": "full_match"
+            },
+            "place_id": "519f1d705d31633e4059e3fc4d2844ea4d40f00102f90180b0ac0500000000c00203e203226f70656e7374726565746d61703a616464726573733a7761792f3935323033343536"
+        }, {
+            "country_code": "ru",
+            "housenumber": "7 к2",
+            "street": "улица Ярослава Гашека",
+            "country": "Russia",
+            "datasource": {
+                "sourcename": "openstreetmap",
+                "attribution": "© OpenStreetMap contributors",
+                "license": "Open Database License",
+                "url": "https://www.openstreetmap.org/copyright"
+            },
+            "state": "Saint Petersburg",
+            "city": "Saint Petersburg City",
+            "suburb": "Myasokombinat",
+            "lon": 30.387697,
+            "lat": 59.8299,
+            "formatted": "улица Ярослава Гашека 7 к2, Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "address_line1": "улица Ярослава Гашека 7 к2",
+            "address_line2": "Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "timezone": {
+                "name": "Europe/Moscow",
+                "offset_STD": "+03:00",
+                "offset_STD_seconds": 10800,
+                "offset_DST": "+03:00",
+                "offset_DST_seconds": 10800,
+                "abbreviation_STD": "MSK",
+                "abbreviation_DST": "MSK"
+            },
+            "result_type": "building",
+            "rank": {
+                "popularity": 7.238570055670087,
+                "confidence": 0,
+                "confidence_city_level": 0,
+                "confidence_street_level": 0,
+                "match_type": "full_match"
+            },
+            "place_id": "51dfc14f1c40633e4059a779c7293aea4d40f00102f9016f19d40100000000c00203e203226f70656e7374726565746d61703a616464726573733a7761792f3330363737333539"
+        }, {
+            "country_code": "ru",
+            "housenumber": "7А корпус 3",
+            "street": "Улица Ярослава Гашека, Дом 7, Корпус 3",
+            "country": "Russia",
+            "datasource": {
+                "sourcename": "openaddresses",
+                "attribution": "© OpenAddresses contributors",
+                "license": "BSD-3-Clause License"
+            },
+            "state": "Saint Petersburg",
+            "city": "Saint Petersburg City",
+            "suburb": "Myasokombinat",
+            "lon": 30.387479,
+            "lat": 59.830207,
+            "formatted": "Улица Ярослава Гашека, Дом 7, Корпус 3 7А корпус 3, Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "address_line1": "Улица Ярослава Гашека, Дом 7, Корпус 3 7А корпус 3",
+            "address_line2": "Myasokombinat, Saint Petersburg City, Saint Petersburg, Russia",
+            "timezone": {
+                "name": "Europe/Moscow",
+                "offset_STD": "+03:00",
+                "offset_STD_seconds": 10800,
+                "offset_DST": "+03:00",
+                "offset_DST_seconds": 10800,
+                "abbreviation_STD": "MSK",
+                "abbreviation_DST": "MSK"
+            },
+            "result_type": "building",
+            "rank": {
+                "popularity": 7.238570055670087,
+                "confidence": 0,
+                "confidence_city_level": 0,
+                "confidence_street_level": 0,
+                "match_type": "full_match"
+            },
+            "place_id": "5104e3e0d231633e405984f4143944ea4d40c00203e203476f70656e6164647265737365733a616464726573733a72752f7370652f7374617465776964652d6164647265737365732d73746174653a66323762376531666234626537313731"
+        }
+    ],
+    "query": {
+        "text": "",
+        "parsed": {
+            "housenumber": "7",
+            "street": "Ярослава Гашека",
+            "city": "Санкт-Петербург",
+            "country": "Russia",
+            "expected_type": "building"
+        }
+    }
+}
