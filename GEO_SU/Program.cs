@@ -39,8 +39,7 @@ namespace GEO_SU {
 
                 using (WebClient client = new WebClient()) {
                     client.Headers.Add("user-agent", userAgent);
-                    client.Credentials = new NetworkCredential(username, password);
-                    // client.DefaultRequestHeaders="user-agent Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)";
+                    client.Credentials = new NetworkCredential(username, password);                   
                     foreach (string file in filesRequest) {
                         List<string> jsons = new();
                         List<string> requestStrings = filesHelper.GetRequestStringFromFiles(file);
@@ -63,7 +62,7 @@ namespace GEO_SU {
                                         jsons.Add(request);
                                     }
 
-                                    Thread.Sleep(20000);
+                                    Thread.Sleep(2000);
                                 }
                             }
                         }
@@ -121,14 +120,11 @@ namespace GEO_SU {
 
         public static string HttpReqiestToApi(string url, WebClient client) {
 
-            Stream stream = client.OpenRead(url);
-
-            using (StreamReader reader = new StreamReader(stream)) {
-                return  reader.ReadToEnd();
-               // return response.Content.ReadAsStringAsync().Result;
-            }
-
-           
+            using (Stream stream = client.OpenRead(url)) {
+                using (StreamReader reader = new StreamReader(stream)) {              
+                    return reader.ReadToEnd();
+                }
+            }           
         }
          
 
