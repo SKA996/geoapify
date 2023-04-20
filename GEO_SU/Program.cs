@@ -21,7 +21,7 @@ namespace GEO_SU {
         private static string country = "Russia";
 
         private static string BaseURL = "https://api.geoapify.com/v1/geocode/search?";// housenumber=7&street=Ярослава%20Гашека&city=Санкт-Петербург&country={country}&format=json&apiKey=9bfcc95b9a7440d7adb8b3b5e1b67f39";
-        private static string urlParams = "format=json&apiKey=9bfcc95b9a7440d7adb8b3b5e1b67f39";
+        private static string urlParams = "lang=ru&format=json&apiKey=9bfcc95b9a7440d7adb8b3b5e1b67f39";
         private static string username = "mbr0969@gmail.com";
         private static string password = "7710118mM*";
 
@@ -38,9 +38,14 @@ namespace GEO_SU {
             if (filesRequest.Count() > 0) {
 
                 using (WebClient client = new WebClient()) {
+
                     client.Headers.Add("user-agent", userAgent);
-                    client.Credentials = new NetworkCredential(username, password);                   
+                    client.Credentials = new NetworkCredential(username, password);
+
+                    List<List<Address>> listAdrsResult = new();
                     foreach (string file in filesRequest) {
+
+                        List<Address> adrsResult = new();
                         List<string> jsons = new();
                         List<string> requestStrings = filesHelper.GetRequestStringFromFiles(file);
 
@@ -48,10 +53,12 @@ namespace GEO_SU {
                             List<string[]> arrStr = filesHelper.GetRequestsString(requestStrings);
 
                             foreach (string[] str in arrStr) {
-                                if (str.Length >= 3) {
-                                    var housenumber = str[0];
-                                    var street = str[1];
-                                    var city = str[2];
+                                if (str.Length >= 4) {
+
+                                    var id = str[0];
+                                    var housenumber = str[1];
+                                    var street = str[2];
+                                    var city = str[3];
 
                                     string url = $"{BaseURL}housenumber={housenumber}&street={street}&city={city}&country={country}&{urlParams}";
 
@@ -59,13 +66,22 @@ namespace GEO_SU {
 
                                     if (!string.IsNullOrEmpty(request)) {
 
-                                        jsons.Add(request);
+                                        adrsResult =  filesHelper.GetAddressesFromJson(request, id);
+
+                                        listAdrsResult.Add(adrsResult);
+
+                                        Console.WriteLine($"Ответ на запрос с  ID = {id} добавлен для записи.");
                                     }
 
-                                    Thread.Sleep(2000);
+                                    Thread.Sleep(500);
                                 }
                             }
                         }
+
+
+                       //List<Address> adrsResult =  filesHelper.GetAddressesFromJson(jsons);
+
+                        filesHelper.WriteFileResult(file, listAdrsResult);
 
                         Console.WriteLine($"Файл запросов с именем {Path.GetFileNameWithoutExtension(file)} обработан.");
                     }
@@ -117,6 +133,9 @@ namespace GEO_SU {
            
 
         }
+
+
+      
 
         public static string HttpReqiestToApi(string url, WebClient client) {
 
