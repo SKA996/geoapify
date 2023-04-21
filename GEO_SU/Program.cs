@@ -43,6 +43,7 @@ namespace GEO_SU {
                     client.Credentials = new NetworkCredential(username, password);
 
                     List<List<Address>> listAdrsResult = new();
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     foreach (string file in filesRequest) {
 
                         List<Address> adrsResult = new();
@@ -66,7 +67,7 @@ namespace GEO_SU {
 
                                     if (!string.IsNullOrEmpty(request)) {
 
-                                        adrsResult =  filesHelper.GetAddressesFromJson(request, id);
+                                        adrsResult = filesHelper.GetAddressesFromJson(request, id);
 
                                         listAdrsResult.Add(adrsResult);
 
@@ -78,15 +79,19 @@ namespace GEO_SU {
                             }
                         }
 
-
-                       //List<Address> adrsResult =  filesHelper.GetAddressesFromJson(jsons);
+                        //List<Address> adrsResult =  filesHelper.GetAddressesFromJson(jsons);
 
                         filesHelper.WriteFileResult(file, listAdrsResult);
 
                         Console.WriteLine($"Файл запросов с именем {Path.GetFileNameWithoutExtension(file)} обработан.");
+                        File.Delete(file);
+                        Console.WriteLine($"Файл {Path.GetFileNameWithoutExtension(file)} удален.");
                     }
+                    Console.ResetColor();
                 }
-           }
+            } else {
+                Console.WriteLine("НЕТ ФАЙЛОВ ДЛЯ ОБРАБОТКИ");
+            }
 
 
 
