@@ -92,51 +92,6 @@ namespace GEO_SU {
             } else {
                 Console.WriteLine("НЕТ ФАЙЛОВ ДЛЯ ОБРАБОТКИ");
             }
-
-
-
-
-
-            #region
-
-            //JObject res = JObject.Parse(json);
-
-            //List<JToken>? results = res["results"]?.ToList();
-
-            //List<Address> addresses = new();            
-            //foreach (JToken item in results) {
-
-            //    if ((item["lat"] != null && item["lon"] !=null) && item["housenumber"] != null) {
-
-            //        string city = item["city"] !=null ? item["city"].ToString() : "";
-                    
-            //        string country = item["country"] != null ? item["country"].ToString() : "";
-                    
-            //        string district = item["district"] != null ? item["district"].ToString() : "";
-
-            //        string housenumber = item["housenumber"].ToString();
-
-            //        string street = item["street"].ToString();
-
-            //        string postcode = item["postcode"] != null ? item["postcode"].ToString() : ""; 
-                    
-            //        string region = item["region"] != null ? item["region"].ToString() : "" ;
-
-            //        string suburb = item["region"] != null ? item["suburb"].ToString() : "" ;
-
-            //        double lat = double.Parse(item["lat"].ToString());
-            //        double lon = double.Parse(item["lon"].ToString());
-
-            //        Address address = new Address() { City = city, Country = country, District = district, Housenumber = housenumber,  Street = street, Postcode = postcode,   Region = region,  Suburb = suburb,  Lat = lat,  Lon = lon };
-            //        addresses.Add(address);
-            //    }
-            //}
-
-            #endregion
-
-            //var adr = addresses;
-           
-
         }
 
 
