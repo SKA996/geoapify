@@ -8,7 +8,9 @@ namespace GEO_SU.Models {
     public class Address {
 
         private string _id;
+        private string _state;
         private string _country;
+        private string _county;
         private string _region;
         private string _city;
         private string _postcode;
@@ -20,8 +22,10 @@ namespace GEO_SU.Models {
         private double _lat;
 
         public string Id { get => _id; set => _id = value; }
+        public string State { get => _state; set => _state = value; }
         public string Country { get => _country; set => _country = value; }
         public string Region { get => _region; set => _region = value; }
+        public string County { get => _county; set => _county = value; }
         public string City { get => _city; set => _city = value; }
         public string Postcode { get => _postcode; set => _postcode = value; }
         public string District { get => _district; set => _district = value; }
@@ -30,7 +34,7 @@ namespace GEO_SU.Models {
         public string Housenumber { get => _housenumber; set => _housenumber = value; }
         public double Lon { get => _lon; set => _lon = value; }
         public double Lat { get => _lat; set => _lat = value; }
-     
+    
 
         public Address() { }
     }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tPWTPx9LxQuRurvpYXXfRBbrF30C5EYgFh8AQ1+vt/rUAIEvr7Hcql6x2Wb7JjzC0UGpmh89SqdyJZzdBmq6tQ==",
+  "dgSpecHash": "nMTCbzRnwz1oIlo2qCNMZxHZAWlNijZTLxJAauviLNNY38JEnINJ+UndOsXIC+DqY/NjowKcSep7pOrPDl60nw==",
   "success": true,
-  "projectFilePath": "D:\\PROJECT\\C#\\GEO_SU\\GEO_SU\\GEO_SU.csproj",
+  "projectFilePath": "D:\\work\\C#\\GEO_SU\\geoapify\\GEO_SU\\GEO_SU.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\204-7\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\papa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
