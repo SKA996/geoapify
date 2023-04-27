@@ -32,3 +32,4 @@ D:\work\C#\GEO_SU\geoapify\GEO_SU\obj\Debug\net6.0\refint\GEO_SU.dll
 D:\work\C#\GEO_SU\geoapify\GEO_SU\obj\Debug\net6.0\GEO_SU.pdb
 D:\work\C#\GEO_SU\geoapify\GEO_SU\obj\Debug\net6.0\GEO_SU.genruntimeconfig.cache
 D:\work\C#\GEO_SU\geoapify\GEO_SU\obj\Debug\net6.0\ref\GEO_SU.dll
+D:\work\C#\GEO_SU\geoapify\GEO_SU\bin\Debug\net6.0\config.json

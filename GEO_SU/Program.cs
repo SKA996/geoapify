@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 using File = System.IO.File;
+using System.Text.Json;
 
 namespace GEO_SU {
     public class Program {
@@ -21,34 +22,39 @@ namespace GEO_SU {
         private static string country = "Russia";
 
         private static string BaseURL = "https://api.geoapify.com/v1/geocode/search?";
-        private static string urlParams = "lang=ru&format=json&apiKey=9bfcc95b9a7440d7adb8b3b5e1b67f39";
-        private static string username = "mbr0969@gmail.com";
-        private static string password = "7710118mM*";
+        private static string apiKey = "";
+        private static string urlParams = $"lang=ru&format=json&apiKey=";
+        private static string username = "";
+        private static string password = "";
 
         private const string userAgent =  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36";
 
         public static void Main(string[] args) {
 
-           
+            if (File.Exists("config.json")) {
+
+                using (FileStream fs = new FileStream("config.json", FileMode.OpenOrCreate)) {
+                   Config? config = System.Text.Json.JsonSerializer.Deserialize<Config>(fs);
+                    username = config.Username;
+                    password = config.Password;
+                    apiKey = config.ApiKey;
+                }
+            }
 
             FilesHelper filesHelper = new FilesHelper();
-
             List<string> filesRequest = filesHelper.GetRequestFiles();
 
             if (filesRequest.Count() > 0) {
 
                 using (WebClient client = new WebClient()) {
-
                     client.Headers.Add("user-agent", userAgent);
                     client.Credentials = new NetworkCredential(username, password);
-
-                   
+                    
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
+
                     foreach (string file in filesRequest) {
                         List<List<Address>> listAdrsResult = new();
-
                         bool isSpb = filesHelper.IsSPbOrLO(Path.GetFileNameWithoutExtension(file));
-
                         List<Address> adrsResult = new();
                         List<string> jsons = new();
                         List<string> requestStrings = filesHelper.GetRequestStringFromFiles(file);
@@ -65,11 +71,11 @@ namespace GEO_SU {
                                     string request = null;
 
                                     if (isSpb) {
-                                        string url = $"{BaseURL}housenumber={housenumber}&street={street}&city={city}&country={country}&{urlParams}";
+                                        string url = $"{BaseURL}housenumber={housenumber}&street={street}&city={city}&country={country}&{urlParams}{apiKey}";
                                         request = HttpReqiestToApi(url, client);
                                     } else {
-                                        string text = $"{housenumber} {street} {city}";
-                                        string url = $"{BaseURL}text={text}&{urlParams}";
+                                        string text = $"{housenumber} {street} {city} {country}";
+                                        string url = $"{BaseURL}text={text}&{urlParams}{apiKey}";
                                         request = HttpReqiestToApi(url, client);
                                     }                                    
 
